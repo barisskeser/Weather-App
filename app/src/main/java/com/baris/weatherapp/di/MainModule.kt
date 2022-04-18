@@ -22,12 +22,6 @@ object MainModule {
 
     @Provides
     @Singleton
-    fun provideAppContext(@ApplicationContext context: Context): Context {
-        return context
-    }
-
-    @Provides
-    @Singleton
     fun provideWeatherDao(@ApplicationContext context: Context): WeatherDao {
         return Room.databaseBuilder(
             context,
