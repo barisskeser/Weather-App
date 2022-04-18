@@ -1,13 +1,4 @@
 
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
->
-app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 d
 4app/src/main/java/com/baris/weatherapp/WeatherApp.kt,e\6\e614f71928d0068fb262b302f135f2841f6b0ee8
 X
@@ -22,8 +13,6 @@ Oapp/src/main/java/com/baris/weatherapp/data/repository/WeatherRepositoryImpl.kt
 Napp/src/main/java/com/baris/weatherapp/ui/weather_list/WeatherListViewModel.kt,b\7\b73de69dcf845c4109ed6eb91dbe6f72e3ca43f9
 e
 5app/src/main/java/com/baris/weatherapp/common/Util.kt,6\3\639d78f59977d8ec1dff66a588a1778115271eaa
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 p
 @app/src/main/java/com/baris/weatherapp/domain/data/WeatherLoc.kt,d\9\d9397e1a65b6a28020a65066c127a258653fe8e9
 j

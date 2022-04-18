@@ -3,6 +3,7 @@ package com.baris.weatherapp.di
 import android.content.Context
 import androidx.room.Room
 import com.baris.weatherapp.R
+import com.baris.weatherapp.common.Constants
 import com.baris.weatherapp.data.local.room.WeatherDatabase
 import com.baris.weatherapp.data.local.room.dao.WeatherDao
 import com.baris.weatherapp.data.remote.WeatherApi
@@ -21,6 +22,12 @@ object MainModule {
 
     @Provides
     @Singleton
+    fun provideAppContext(@ApplicationContext context: Context): Context {
+        return context
+    }
+
+    @Provides
+    @Singleton
     fun provideWeatherDao(@ApplicationContext context: Context): WeatherDao {
         return Room.databaseBuilder(
             context,
@@ -33,7 +40,7 @@ object MainModule {
     @Singleton
     fun provideWeatherApi(): WeatherApi {
         return Retrofit.Builder()
-            .baseUrl(R.string.weather_api_base_url.toString())
+            .baseUrl(Constants.BASE_URL_WEATHER)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(WeatherApi::class.java)

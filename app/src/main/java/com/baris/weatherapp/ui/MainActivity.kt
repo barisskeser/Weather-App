@@ -3,15 +3,22 @@ package com.baris.weatherapp.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
 import com.baris.weatherapp.R
+import com.baris.weatherapp.data.remote.WeatherApi
 import com.google.android.gms.common.api.Status
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.api.net.PlacesClient
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.runBlocking
+import okhttp3.internal.wait
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var placesClient: PlacesClient
@@ -19,7 +26,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         Places.initialize(applicationContext, getString(R.string.geo_api_key))
         placesClient = Places.createClient(this)
