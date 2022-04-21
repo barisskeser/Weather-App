@@ -1,7 +1,5 @@
 package com.baris.weatherapp.data.remote.dto
 
-import com.baris.weatherapp.domain.model.Weather
-
 data class Hourly(
     val clouds: Int,
     val dew_point: Double,

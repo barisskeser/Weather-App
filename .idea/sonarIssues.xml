@@ -83,6 +83,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/baris/weatherapp/data/remote/dto/Daily.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/baris/weatherapp/data/remote/dto/Hourly.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/baris/weatherapp/data/remote/dto/Weather.kt">
           <value>
             <set />
@@ -194,6 +204,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/baris/weatherapp/ui/weather_list/WeatherList.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/baris/weatherapp/ui/weather_list/WeatherListState.kt">
           <value>
             <set />
           </value>
