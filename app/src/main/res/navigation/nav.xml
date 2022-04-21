@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_weatherListFragment_to_weatherDetail"
             app:destination="@id/weatherDetail" />
+        <action
+            android:id="@+id/action_weatherListFragment_to_addLocationFragment"
+            app:destination="@id/addLocationFragment" />
     </fragment>
     <fragment
         android:id="@+id/weatherDetail"
@@ -19,6 +22,14 @@
         android:label="WeatherDetail" >
         <action
             android:id="@+id/action_weatherDetail_to_weatherListFragment"
+            app:destination="@id/weatherListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLocationFragment"
+        android:name="com.baris.weatherapp.ui.add_location.AddLocationFragment"
+        android:label="AddLocationFragment" >
+        <action
+            android:id="@+id/action_addLocationFragment_to_weatherListFragment"
             app:destination="@id/weatherListFragment" />
     </fragment>
 </navigation>
