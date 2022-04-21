@@ -203,6 +203,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/baris/weatherapp/ui/weather_detail/WeatherDetailFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/baris/weatherapp/ui/weather_list/WeatherList.kt">
           <value>
             <set />

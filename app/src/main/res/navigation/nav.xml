@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/weatherDetail">
+
+    <fragment
+        android:id="@+id/weatherListFragment"
+        android:name="com.baris.weatherapp.ui.weather_list.WeatherListFragment"
+        android:label="WeatherListFragment" >
+        <action
+            android:id="@+id/action_weatherListFragment_to_weatherDetail"
+            app:destination="@id/weatherDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetail"
+        android:name="com.baris.weatherapp.ui.weather_detail.WeatherDetail"
+        android:label="WeatherDetail" >
+        <action
+            android:id="@+id/action_weatherDetail_to_weatherListFragment"
+            app:destination="@id/weatherListFragment" />
+    </fragment>
+</navigation>
