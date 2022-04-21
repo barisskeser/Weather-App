@@ -9,8 +9,6 @@ y
 Iapp/src/main/java/com/baris/weatherapp/data/local/room/WeatherDatabase.kt,0\d\0d7546d27741db31faac4ddd1eefec9756d79b77
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-{
-Kapp/src/main/java/com/baris/weatherapp/data/local/room/entity/WeatherLoc.kt,c\8\c89c81a282579c384c5761f2945363efd7bc630f
 A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 x

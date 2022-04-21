@@ -11,7 +11,7 @@ import com.baris.weatherapp.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class WeatherList : Fragment() {
+class WeatherListFragment : Fragment() {
 
     private val viewModel: WeatherListViewModel by viewModels()
 
