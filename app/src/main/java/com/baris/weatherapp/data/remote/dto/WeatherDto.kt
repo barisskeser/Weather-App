@@ -1,19 +1,21 @@
 package com.baris.weatherapp.data.remote.dto
 
-import com.baris.weatherapp.domain.model.*
+import com.baris.weatherapp.domain.model.Weather
 
 data class WeatherDto(
-    val base: String,
-    val clouds: Clouds,
-    val cod: Int,
-    val coord: Coord,
-    val dt: Int,
-    val id: Int,
-    val main: Main,
-    val name: String,
-    val sys: Sys,
-    val timezone: Int,
-    val visibility: Int,
-    val weather: List<Weather>,
-    val wind: Wind
+    val current: Current,
+    val daily: List<Daily>,
+    val hourly: List<Hourly>,
+    val lat: Double,
+    val lon: Double,
+    val timezone: String,
+    val timezone_offset: Int
 )
+
+fun WeatherDto.toWeather(): Weather {
+    return Weather(
+        current = this.current,
+        daily = this.daily,
+        hourly = this.hourly
+    )
+}
