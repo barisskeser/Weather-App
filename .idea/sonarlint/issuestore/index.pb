@@ -18,8 +18,6 @@ Eapp/src/main/java/com/baris/weatherapp/ui/weather_list/WeatherList.kt,5\7\57b5
 Mapp/src/main/java/com/baris/weatherapp/domain/repository/WeatherRepository.kt,5\b\5b821d52960e18f2e6b8a1467d24e29e9209fb8a
 
 Oapp/src/main/java/com/baris/weatherapp/data/repository/WeatherRepositoryImpl.kt,a\4\a41233a5de75868d0f7c43a84665a1a371ee292b
-~
-Napp/src/main/java/com/baris/weatherapp/ui/weather_list/WeatherListViewModel.kt,b\7\b73de69dcf845c4109ed6eb91dbe6f72e3ca43f9
 e
 5app/src/main/java/com/baris/weatherapp/common/Util.kt,6\3\639d78f59977d8ec1dff66a588a1778115271eaa
 @
