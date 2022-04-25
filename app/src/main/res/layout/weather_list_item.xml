@@ -1,7 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:paddingBottom="12dp"
+    android:background="@color/weather_item_background">
 
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Ümraniye • 14:07"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/itemWeatherIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemTitle"
+        app:srcCompat="@drawable/ic_02d" />
+
+    <ImageView
+        android:id="@+id/icUmbrella"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemWeatherIcon"
+        app:layout_constraintStart_toEndOf="@+id/itemWeatherIcon"
+        app:layout_constraintTop_toTopOf="@+id/itemWeatherIcon"
+        app:srcCompat="@drawable/ic_umbrella" />
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/itemRainPerc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15%"
+        app:layout_constraintBottom_toBottomOf="@+id/icUmbrella"
+        app:layout_constraintStart_toEndOf="@+id/icUmbrella"
+        app:layout_constraintTop_toTopOf="@+id/icUmbrella" />
+
+    <TextView
+        android:id="@+id/itemTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="36°"
+        app:layout_constraintBottom_toBottomOf="@+id/icUmbrella"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/icUmbrella"
+        android:layout_marginRight="12dp"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/itemDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Az Bulutlu"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/itemWeatherIcon"
+        app:layout_constraintStart_toStartOf="@+id/itemWeatherIcon"
+        app:layout_constraintTop_toBottomOf="@+id/itemWeatherIcon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

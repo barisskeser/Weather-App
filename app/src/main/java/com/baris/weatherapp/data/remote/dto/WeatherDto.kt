@@ -14,6 +14,7 @@ data class WeatherDto(
 
 fun WeatherDto.toWeather(): Weather {
     return Weather(
+        place = "",
         current = this.current,
         daily = this.daily,
         hourly = this.hourly

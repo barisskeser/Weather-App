@@ -7,6 +7,8 @@ import com.baris.weatherapp.common.Constants
 import com.baris.weatherapp.data.local.room.WeatherDatabase
 import com.baris.weatherapp.data.local.room.dao.WeatherDao
 import com.baris.weatherapp.data.remote.WeatherApi
+import com.baris.weatherapp.data.repository.WeatherRepositoryImpl
+import com.baris.weatherapp.domain.repository.WeatherRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -38,5 +40,11 @@ object MainModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(WeatherApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideWeatherRepository(api: WeatherApi): WeatherRepository {
+        return WeatherRepositoryImpl(api)
     }
 }

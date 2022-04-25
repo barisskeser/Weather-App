@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+/*
         Places.initialize(applicationContext, getString(R.string.geo_api_key))
         placesClient = Places.createClient(this)
 
@@ -58,6 +58,6 @@ class MainActivity : AppCompatActivity() {
                 Log.i("MainActivity", "An error occurred: $status")
             }
         })
-
+*/
     }
 }
