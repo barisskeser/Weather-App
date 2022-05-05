@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.baris.weatherapp.R
+import com.baris.weatherapp.data.remote.dto.WeatherDetail
+import com.baris.weatherapp.data.remote.dto.getIconResource
 import com.baris.weatherapp.databinding.WeatherListItemBinding
 import com.baris.weatherapp.domain.model.Weather
 import java.sql.Timestamp
@@ -28,13 +30,13 @@ class WeatherAdapter(
         val dt = weatherList[position].current.dt
         val time =
             Timestamp(dt).time.hours.toString() + ":" + Timestamp(dt).time.minutes
-        val icon = weatherList[position].current.weatherDetail.first().icon
+        val iconResource = weatherList[position].current.weatherDetail.first().getIconResource()
         val description = weatherList[position].current.weatherDetail.first().description
         val rain = weatherList[position].daily.first().rain
         val temp = weatherList[position].current.temp
 
         holder.view.itemTitle.text = "$place • $time"
-        holder.view.itemWeatherIcon.setImageResource(getImageFromDrawable(icon))
+        holder.view.itemWeatherIcon.setImageResource(iconResource)
         holder.view.itemDesc.text = description
         holder.view.itemRainPerc.text = rain.toString()
         holder.view.itemTemp.text = temp.toString()
@@ -44,33 +46,7 @@ class WeatherAdapter(
         return weatherList.size
     }
 
-    class WeatherViewHolder(var view: WeatherListItemBinding) : RecyclerView.ViewHolder(view.root) {
-
-    }
-
-    private fun getImageFromDrawable(name: String): Int {
-        when(name){
-            "01d" -> return R.drawable.ic_01d
-            "01n" -> return R.drawable.ic_01n
-            "02d" -> return R.drawable.ic_02d
-            "02n" -> return R.drawable.ic_02n
-            "03d" -> return R.drawable.ic_03d
-            "03n" -> return R.drawable.ic_03n
-            "04d" -> return R.drawable.ic_04d
-            "04n" -> return R.drawable.ic_04n
-            "09d" -> return R.drawable.ic_09d
-            "09n" -> return R.drawable.ic_09n
-            "10d" -> return R.drawable.ic_10d
-            "10n" -> return R.drawable.ic_10n
-            "11d" -> return R.drawable.ic_11n
-            "11n" -> return R.drawable.ic_11n
-            "13d" -> return R.drawable.ic_13d
-            "13n" -> return R.drawable.ic_13n
-            "50d" -> return R.drawable.ic_50d
-            "50n" -> return R.drawable.ic_50d
-            else -> return 0
-        }
-    }
+    class WeatherViewHolder(var view: WeatherListItemBinding) : RecyclerView.ViewHolder(view.root)
 
     @SuppressLint("NotifyDataSetChanged")
     fun update(newList: List<Weather>) {
